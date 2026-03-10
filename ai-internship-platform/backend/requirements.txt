@@ -1,5 +1,5 @@
 flask
 flask-cors
-pandas
+pymongo
+PyPDF2
 scikit-learn
-joblib
