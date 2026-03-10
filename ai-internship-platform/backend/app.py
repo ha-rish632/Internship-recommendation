@@ -3,9 +3,12 @@ from flask_cors import CORS
 from pymongo import MongoClient
 from ai.skill_extractor import extract_skills_from_resume
 from ai.recommendation_engine import recommend_internships
+import os
+
 
 app = Flask(__name__)
 CORS(app)
+PORT = int(os.environ.get("PORT", 5000))
 
 # MongoDB Connection
 client = MongoClient("mongodb://localhost:27017/")
